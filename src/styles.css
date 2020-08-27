@@ -51,6 +51,17 @@ div.col-7 i,
   background-image: url("https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=550");
 }
 
+.one {
+  position: fixed;
+  top: 565px;
+  left: 15px;
+  color: #5a6168;
+}
+.code-link {
+  color: #5a6168;
+  text-decoration: underline;
+}
+
 .current-time,
 .humidity {
   text-align: right;
