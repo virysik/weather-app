@@ -1,0 +1,89 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+div.col-7 i,
+.degrees {
+  font-size: 65px;
+  color: #fff;
+}
+
+.btn {
+  font-size: 20px;
+  padding: 2px 25px;
+  margin: 0 10px;
+  height: 37px;
+}
+
+.city {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 550px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 20px 0px 20px 35px;
+  border: 1px solid #5a6168;
+  border-radius: 8px;
+  background-image: url("https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=550");
+}
+
+.current-time,
+.humidity {
+  text-align: right;
+  font-size: 17px;
+  color: #fff;
+}
+
+.sunny {
+  font-size: 20px;
+  margin: 0;
+  width: 200px;
+  text-align: center;
+  color: #fff;
+}
+
+.forecast {
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+}
+
+.forecast-line {
+  width: 515px;
+}
+.forecast-emoji {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.units {
+  position: relative;
+  top: -36px;
+  font-weight: bold;
+  color: #fff;
+}
