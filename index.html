@@ -9,126 +9,141 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App⛅️</title>
     <link rel="stylesheet" href="src/styles.css" />
-
-</head>
+  </head>
 
   <body>
-
     <div class="container">
       <p class="city">Enter a city:</p>
 
-        <form id = "search-form"> 
-            <div class="form-row">
-              <div class="col-5">
-                  <input type="text" class="form-control" id = "search-item" autofocus="on" autocomplete="off" />
-              </div>
-               <div class="col-auto">
-                 <input type="submit" class="btn btn-secondary" value="search" />
-               </div>
-               <div class="col-auto">
-                  <input type="button" class="btn btn-secondary" id = "current" value="current" />
-              </div>
-            </div>
-       </form>
-    
-    <br>
+      <form id="search-form">
+        <div class="form-row">
+          <div class="col-5">
+            <input
+              type="text"
+              class="form-control"
+              id="search-item"
+              autofocus="on"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-auto">
+            <input type="submit" class="btn btn-secondary" value="search" />
+          </div>
+          <div class="col-auto">
+            <input
+              type="button"
+              class="btn btn-secondary"
+              id="current"
+              value="current"
+            />
+          </div>
+        </div>
+      </form>
+
+      <br />
 
       <div class="row">
         <div class="col-7">
           <h1></h1>
         </div>
         <div class="col-4">
-          <form>
-            <ul>
-              <li class="current-time" id = "time-item">
-              17:00
-              </li>
-              <li class="current-time" id = "date-item">
-                25 july
-              </li>
-              <li class="current-time" id = "day-item">
-               saturday
-              </li>
-            </ul>
-          </form>
+          <ul>
+            <li class="current-time">
+              Updated at <span id="time-item"></span>
+            </li>
+            <li class="current-time" id="date-item"></li>
+            <li class="current-time" id="day-item"></li>
+          </ul>
         </div>
       </div>
 
-      <p class="sunny" id = "description-item"></p>
+      <p class="sunny" id="description-item"></p>
 
       <div class="row">
         <div class="col-7">
-            <span class = "degrees" id = "current-temperature"></span> 
-             <span class="units">
-              °C
-            </span>
+          <span class="degrees" id="current-temperature"></span>
+          <span class="units"> °C </span>
         </div>
-    
-      <div class="col-4">
+
+        <div class="col-4">
           <ul>
-            <br>
-              <li class="humidity">
-                humidity: <span id = "humidity-item"></span>%
-              </li>
-              <li class="humidity">
-                wind: <span id = "wind-item"></span>km/h
-             </li>
-         </ul>
-     </div>
-   </div>
+            <br />
+            <li class="humidity">
+              humidity: <span id="humidity-item"></span>%
+            </li>
+            <li class="humidity">wind: <span id="wind-item"></span> km/h</li>
+          </ul>
+        </div>
+      </div>
 
-     <br>
-        <div class="row forecast-line">
-          <div class="col">
-            <ul>
-              <li class="forecast" id = "date-item1">26 july</li>
-              <li class="forecast-emoji"><i class="fas fa-cloud-sun"></i></li>
-              <li class="forecast">19°C</li>
-            </ul>
-          </div>
+      <br />
+      <div class="row forecast-line">
+        <div class="col">
+          <ul>
+            <li class="forecast" id="date-item1">26 july</li>
+            <li class="forecast-emoji"><i class="fas fa-cloud-sun"></i></li>
+            <li class="forecast">19°C</li>
+          </ul>
+        </div>
 
-          <div class="col">
-            <ul>
-              <li class="forecast" id = "date-item2">27 july</li>
-              <li class="forecast-emoji"><i class="far fa-sun"></i></li>
-              <li class="forecast">23°C</li>
-            </ul>
-          </div>
+        <div class="col">
+          <ul>
+            <li class="forecast" id="date-item2">27 july</li>
+            <li class="forecast-emoji"><i class="far fa-sun"></i></li>
+            <li class="forecast">23°C</li>
+          </ul>
+        </div>
 
-          <div class="col">
-           <ul>
-              <li class="forecast" id = "date-item3">28 july</li>
-              <li class="forecast-emoji"><i class="fas fa-cloud-sun-rain"></i></li>
-              <li class="forecast">20°C</li>
-            </ul>
-          </div>
+        <div class="col">
+          <ul>
+            <li class="forecast" id="date-item3">28 july</li>
+            <li class="forecast-emoji">
+              <i class="fas fa-cloud-sun-rain"></i>
+            </li>
+            <li class="forecast">20°C</li>
+          </ul>
+        </div>
 
-          <div class="col">
-            <ul>
-              <li class="forecast" id = "date-item4">29 july</li>
-              <li class="forecast-emoji"><i class="fas fa-cloud-sun-rain"></i></li>
-              <li class="forecast">20°C</li>
-            </ul>
-          </div>
+        <div class="col">
+          <ul>
+            <li class="forecast" id="date-item4">29 july</li>
+            <li class="forecast-emoji">
+              <i class="fas fa-cloud-sun-rain"></i>
+            </li>
+            <li class="forecast">20°C</li>
+          </ul>
+        </div>
 
-          <div class="col">
-           <ul>
-              <li class="forecast" id = "date-item5">30 july</li>
-              <li class="forecast-emoji"><i class="fas fa-cloud-sun"></i></li>
-              <li class="forecast">21°C</li>
-            </ul>
-          </div>
+        <div class="col">
+          <ul>
+            <li class="forecast" id="date-item5">30 july</li>
+            <li class="forecast-emoji"><i class="fas fa-cloud-sun"></i></li>
+            <li class="forecast">21°C</li>
+          </ul>
         </div>
       </div>
     </div>
+
     <div class="one">
-<a href="https://github.com/virysik/weather-app" class = "code-link" target="_blank">Open-source code</a><span> by Vera Kuzjo</span>
-</div>
-  <script src="https://kit.fontawesome.com/8488ddaffd.js" crossorigin="anonymous"></script>
-    <script src = "src/index.js"></script>
+      <a
+        href="https://github.com/virysik/weather-app"
+        class="code-link"
+        target="_blank"
+        >Open-source code</a
+      >
+      by Vera Kuzjo
+    </div>
+    <script
+      src="https://kit.fontawesome.com/8488ddaffd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
