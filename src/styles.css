@@ -34,11 +34,14 @@ ul {
 
 .btn {
   font-size: 20px;
-  padding: 2px 25px;
+  padding: 2px 22px;
   margin: 0 10px;
-  height: 37px;
+  height: 38px;
 }
 
+.first-button {
+  margin-left: 25px;
+}
 .city {
   text-align: center;
   color: #fff;
