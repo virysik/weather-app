@@ -8,6 +8,7 @@ h1 {
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #fff;
+  margin-bottom: 15px;
 }
 
 a {
@@ -18,8 +19,14 @@ ul {
   list-style: none;
   padding: 0;
 }
+.attributes {
+  padding-right: 0px;
+}
 
-div.col-7 i,
+.date-column {
+  margin-top: 10px;
+}
+
 .degrees {
   font-size: 65px;
   color: #fff;
@@ -51,9 +58,9 @@ div.col-7 i,
   background-image: url("https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=550");
 }
 
-.one {
+.signature {
   position: fixed;
-  top: 565px;
+  top: 555px;
   left: 15px;
   color: #5a6168;
 }

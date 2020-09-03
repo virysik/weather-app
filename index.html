@@ -53,7 +53,7 @@
         <div class="col-7">
           <h1></h1>
         </div>
-        <div class="col-4">
+        <div class="col-4 date-column">
           <ul>
             <li class="current-time">
               Updated at <span id="time-item"></span>
@@ -67,12 +67,17 @@
       <p class="sunny" id="description-item"></p>
 
       <div class="row">
-        <div class="col-7">
-          <span class="degrees" id="current-temperature"></span>
-          <span class="units"> °C </span>
+        <div class="clearfix">
+          <div class="col-5 float-left">
+            <img src="" alt="" id="weather-icon" />
+          </div>
+          <div class="col-7 float-left">
+            <span class="degrees" id="current-temperature"></span>
+            <span class="units"> °C </span>
+          </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-5 attributes">
           <ul>
             <br />
             <li class="humidity">
@@ -129,17 +134,18 @@
           </ul>
         </div>
       </div>
+
+      <div class="signature">
+        <a
+          href="https://github.com/virysik/weather-app"
+          class="code-link"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Vera Kuzjo
+      </div>
     </div>
 
-    <div class="one">
-      <a
-        href="https://github.com/virysik/weather-app"
-        class="code-link"
-        target="_blank"
-        >Open-source code</a
-      >
-      by Vera Kuzjo
-    </div>
     <script
       src="https://kit.fontawesome.com/8488ddaffd.js"
       crossorigin="anonymous"
