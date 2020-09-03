@@ -15,10 +15,16 @@ a {
   color: #fff;
 }
 
+p,
+li::first-letter {
+  text-transform: capitalize;
+}
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 .attributes {
   padding-right: 0px;
 }
