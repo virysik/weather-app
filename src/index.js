@@ -1,63 +1,49 @@
-let now = new Date();
-let currentTime = document.querySelector("#time-item");
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatTime(timestamp) {
+  let now = new Date(timestamp);
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+
+function formatDate(now) {
+  let currentDate = document.querySelector("#date-item");
+  let dayNumber = now.getDate();
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+  currentDate.innerHTML = `${dayNumber} ${month}`;
+
+  let currentDay = document.querySelector("#day-item");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  currentDay.innerHTML = `${day}`;
 }
-currentTime.innerHTML = `${hours}:${minutes}`;
-
-let currentDate = document.querySelector("#date-item");
-let dayNumber = now.getDate();
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = months[now.getMonth()];
-currentDate.innerHTML = `${dayNumber} ${month}`;
-
-let currentDateOne = document.querySelector("#date-item1");
-currentDateOne.innerHTML = `${dayNumber + 1} ${month}`;
-
-let currentDateTwo = document.querySelector("#date-item2");
-currentDateTwo.innerHTML = `${dayNumber + 2} ${month}`;
-
-let currentDateThree = document.querySelector("#date-item3");
-currentDateThree.innerHTML = `${dayNumber + 3} ${month}`;
-
-let currentDateFour = document.querySelector("#date-item4");
-currentDateFour.innerHTML = `${dayNumber + 4} ${month}`;
-
-let currentDateFive = document.querySelector("#date-item5");
-currentDateFive.innerHTML = `${dayNumber + 5} ${month}`;
-
-let currentDay = document.querySelector("#day-item");
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-currentDay.innerHTML = `${day}`;
-
-//week5 homework
 
 function searchCity(city) {
   let apiKey = "974437790c20752769b5d2ac36ae13ef";
@@ -72,7 +58,6 @@ function handleSubmit(event) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   document.querySelector("h1").innerHTML = response.data.name;
 
   document.querySelector("#current-temperature").innerHTML = Math.round(
@@ -88,12 +73,11 @@ function showTemperature(response) {
 
   document.querySelector("#description-item").innerHTML =
     response.data.weather[0].main;
+
+  document.querySelector("#time-item").innerHTML = formatTime(
+    response.data.dt * 1000
+  );
 }
-
-let yourCity = document.querySelector("#search-form");
-yourCity.addEventListener("submit", handleSubmit);
-
-searchCity("New York");
 
 function searchPosition(position) {
   let latitude = position.coords.latitude;
@@ -109,5 +93,13 @@ function searchCurrentWeather() {
   navigator.geolocation.getCurrentPosition(searchPosition);
 }
 
+let yourCity = document.querySelector("#search-form");
+yourCity.addEventListener("submit", handleSubmit);
+
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", searchCurrentWeather);
+
+let now = new Date();
+formatDate(now);
+
+searchCity("New York");
