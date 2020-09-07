@@ -1,3 +1,7 @@
+a {
+  color: #fff;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -11,10 +15,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-a {
-  color: #fff;
-}
-
 p,
 li:first-letter {
   text-transform: capitalize;
@@ -23,10 +23,46 @@ li:first-letter {
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
-.attributes {
-  padding-right: 0px;
+.btn {
+  font-size: 20px;
+  padding: 2px 22px;
+  margin: 0 10px;
+  height: 38px;
+}
+
+.city {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.code-link {
+  color: #5a6168;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 560px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 20px 0px 20px 35px;
+  border: 1px solid #5a6168;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-image: url("https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=550");
+}
+
+.current-time,
+.humidity {
+  text-align: right;
+  font-size: 17px;
+  color: #fff;
 }
 
 .date-column {
@@ -38,54 +74,7 @@ ul {
   color: #fff;
 }
 
-.btn {
-  font-size: 20px;
-  padding: 2px 22px;
-  margin: 0 10px;
-  height: 38px;
-}
-
-.first-button {
-  margin-left: 25px;
-}
-.city {
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-.container {
-  max-width: 550px;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  padding: 20px 0px 20px 35px;
-  border: 1px solid #5a6168;
-  border-radius: 8px;
-  background-image: url("https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=550");
-}
-
-.signature {
-  position: fixed;
-  top: 555px;
-  left: 15px;
-  color: #5a6168;
-}
-.code-link {
-  color: #5a6168;
-  text-decoration: underline;
-}
-
-.current-time,
-.humidity {
-  text-align: right;
-  font-size: 17px;
-  color: #fff;
-}
-
-.sunny {
+.description {
   font-size: 20px;
   margin: 0;
   width: 200px;
@@ -93,19 +82,28 @@ ul {
   color: #fff;
 }
 
+.first-button {
+  margin-left: 25px;
+}
+
 .forecast {
   font-size: 17px;
   color: #fff;
   text-align: center;
 }
-
-.forecast-line {
-  width: 515px;
+#forecast-line {
+  width: 513px;
 }
+
 .forecast-emoji {
-  font-size: 30px;
-  color: #fff;
-  text-align: center;
+  width: 60px;
+}
+
+.signature {
+  position: fixed;
+  top: 530px;
+  left: 15px;
+  color: #5a6168;
 }
 
 .units {

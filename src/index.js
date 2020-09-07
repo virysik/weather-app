@@ -91,9 +91,11 @@ function showWeatherForecast(response) {
     forecastLine.innerHTML += `<div class="col">
             <ul>
                <li class="forecast time">${formatTime(forecast.dt * 1000)}</li>
-                 <li class="forecast-emoji"><img src="http://openweathermap.org/img/wn/${
+                 <li><img src="http://openweathermap.org/img/wn/${
                    forecast.weather[0].icon
-                 }@2x.png" alt=${forecast.weather[0].description}></li>
+                 }@2x.png" alt=${
+      forecast.weather[0].description
+    } class = "forecast-emoji" /></li>
                <li class="forecast temp">
           ${Math.round(forecast.main.temp)}°</li>
            </ul>
