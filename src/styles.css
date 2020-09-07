@@ -26,6 +26,16 @@ ul {
   margin-bottom: 0;
 }
 
+.active-link {
+  color: #5a6168;
+  cursor: default;
+}
+
+.active-link:hover {
+  text-decoration: none;
+  color: #5a6168;
+}
+
 .btn {
   font-size: 20px;
   padding: 2px 22px;

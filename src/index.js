@@ -81,7 +81,6 @@ function showTemperature(response) {
 }
 
 function showWeatherForecast(response) {
-  console.log(response.data);
   let forecastLine = document.querySelector("#forecast-line");
   forecastLine.innerHTML = null;
   let forecast = null;
@@ -137,6 +136,8 @@ function searchCurrentWeather() {
 
 function changeToFahrenheit(event) {
   event.preventDefault();
+  fahrenheitLink.classList.add("active-link");
+  celsiusLink.classList.remove("active-link");
   let temperature = document.querySelector("#current-temperature");
   let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemp);
@@ -144,6 +145,8 @@ function changeToFahrenheit(event) {
 
 function changeToCelsius(event) {
   event.preventDefault();
+  fahrenheitLink.classList.remove("active-link");
+  celsiusLink.classList.add("active-link");
   let temperature = document.querySelector("#current-temperature");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
